@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakenna HTML JavaScriptillä</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="runko">
+    <script>
+        document.body.id += "runko";
+
+        var runko = document.getElementById('runko');
+        var header = document.createElement("header");
+        var section = document.createElement("section");
+        var figure = document.createElement("figure");
+        var footer = document.createElement("footer");        
+
+        var h1 = document.createElement("h1");
+        var p1 = document.createElement("p1");
+        var p2 = document.createElement("p2");
+        var p3 = document.createElement("p3");
+        
+        var text0 = document.createTextNode("Tämä on artikkelin otsikko");
+        var text1 = document.createTextNode("Ensimmäinen kappale.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sint magni quam, necessitatibus minus nam!");
+        var text2 = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita recusandae natus reprehenderit, excepturi minima quas molestias, ducimus corrupti non iure quia rerum, iste delectus ut. Eum excepturi eligendi, fugiat adipisci accusantium aliquam, fuga cupiditate voluptatibus, ut suscipit praesentium eos. Neque architecto delectus quidem exercitationem ullam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sint magni quam, necessitatibus minus nam!");
+        var img = document.createElement("img");
+        img.src = "image/images.png";
+
+        var text3 = document.createTextNode("@ 2020 Tomoko Uehara");
+        
+        header.className = "Ylätunniste";
+        section.id = "rinnakkarin";
+        figure.id = "kuvanpaikka";
+        p1.className = "p1";
+        p2.className = "p2";
+        p3.className = "p3";
+
+        h1.appenChild(text0);
+        p1.appenChild(text1);
+        p2.appenChild(text2);
+        p3.appenChild(text3);
+
+        header.appendChild(h1);
+        header.appendChild(p1);
+
+        section.appendChild(p2);
+        section.appendChild(figure);
+        section.appendChild(p3);
+
+        runko.appendChild(header);
+        runko.appendChild(section);
+        figure.appendChild(img);
+        runko.appendChild(footer);
+
+    </script>
+    <header class="ylätunniste">
+        <h1>Tämä on arttikelin otsikko</h1>
+        <p class="p1">Ensimmäinen kappale.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sint magni quam, necessitatibus minus nam!</p>
+    </header>
+    <section id="rinnakkain">
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita recusandae natus reprehenderit, excepturi minima quas molestias, ducimus corrupti non iure quia rerum, iste delectus ut. Eum excepturi eligendi, fugiat adipisci accusantium aliquam, fuga cupiditate voluptatibus, ut suscipit praesentium eos. Neque architecto delectus quidem exercitationem ullam.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam corrupti quos, blanditiis dolores sapiente quas!</p>
+        <figure id="kuvanpaikka">
+            <img src="image/images.png">
+        </figure>
+    </section>
+    <footer>
+        <p class="p3">@2020 Tomoko Uehara</p>
+    </footer>
+</body>
+</html>
